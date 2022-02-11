@@ -9,9 +9,10 @@ package Laboratorio4;
  *
  * @author jcgof
  */
-public class Aldeano {
-    public String nombre,apellido;
-    public int vida,edad;
+public abstract class Aldeano {
+
+    public String nombre, apellido;
+    public int vida, edad;
 
     public Aldeano(String nombre, String apellido, int edad, int vida) {
         this.nombre = nombre;
@@ -56,10 +57,8 @@ public class Aldeano {
     public String toString() {
         return "Aldeano{" + "nombre=" + nombre + ", apellido=" + apellido + ", vida=" + vida + ", edad=" + edad + '}';
     }
+
     //Las profesiones compartin misma funcion que es
-    //atacar y morir
-    
-    
-    
-    
+    public abstract int extra(Aldeano ataque);
+
 }
