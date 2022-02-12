@@ -13,8 +13,11 @@ import java.util.Scanner;
  */
 public class Main {
 
+    static Familia familia;
+    static Scanner leer = new Scanner(System.in);
+
     public static void main(String args[]) {
-        Scanner leer = new Scanner(System.in);
+
         int opcion;
         do {
             System.out.println("1. Crear una Familia");
@@ -41,4 +44,59 @@ public class Main {
         } while (opcion != 5);
         System.out.println("Hasta luego B)");
     }
+
+    //Funcion para crear aldeano
+    public static void crearAldeano() {
+        String nombre;
+        String apellido;
+        int edad;
+        int vida;
+        System.out.println("Escriba el nombre del Aldeano");
+        nombre = leer.next();
+        System.out.println("Escriba el apellido del Aldeano");
+        apellido = leer.next();
+        
+        System.out.println("Escriba la edad del Aldeano");
+        edad = leer.nextInt();
+        System.out.println("Escriba la vida del Aldeano");
+        vida = leer.nextInt();
+        System.out.println("Eliga cual profesion quiere para el Aldeano");
+        System.out.println("1. Normal");
+        System.out.println("2. Pacifista");
+        System.out.println("3. Herrero");
+        System.out.println("4. Agronomo");
+        int opcion = leer.nextInt();
+        switch (opcion) {
+            case 1: {
+                
+            }
+            break;
+
+            case 2: {
+                
+            }
+            break;
+
+            case 3: {
+                
+            }
+            break;
+
+            case 4: {
+                
+                
+            }
+            break;
+        }
+    }
+
+    //Verifica si el Apellido existe
+    public static boolean chequeo(){
+        
+    } 
+    
+    
+    
+    
+    
 }
