@@ -5,15 +5,16 @@
  */
 package Laboratorio4;
 
+import java.util.Random;
 import java.util.Scanner;
-
+import java.util.ArrayList;
 /**
  *
  * @author jcgof
  */
 public class Main {
-
-    static Familia familia;
+    static Random random;
+    static ArrayList<Familia> familia;
     static Scanner leer = new Scanner(System.in);
 
     public static void main(String args[]) {
@@ -31,7 +32,7 @@ public class Main {
                     System.out.println("H");
                     break;
                 case 2:
-                    System.out.println("4");
+                    crearAldeano();
                     break;
                 case 3:
                     System.out.println("4r");
@@ -55,7 +56,9 @@ public class Main {
         nombre = leer.next();
         System.out.println("Escriba el apellido del Aldeano");
         apellido = leer.next();
-        
+        if(chequeo(apellido)){
+            
+        }
         System.out.println("Escriba la edad del Aldeano");
         edad = leer.nextInt();
         System.out.println("Escriba la vida del Aldeano");
@@ -91,12 +94,25 @@ public class Main {
     }
 
     //Verifica si el Apellido existe
-    public static boolean chequeo(){
-        
+    public static Familia chequeo(String apellido){
+        for (Familia familia1 : familia) {
+           if(apellido.equals(familia1.getApellidoU()))
+               return familia1;
+        } 
+        return null;
     } 
     
+    //Agrega el Aldeano al apellido existente
+    public static void agregar(){
+        
+    }
     
-    
-    
+    public static void list(){
+        System.out.println("Lista: ");
+        int pos = 1;
+        for(Familia f : familia) {
+            System.out.println();
+        }
+    }
     
 }
